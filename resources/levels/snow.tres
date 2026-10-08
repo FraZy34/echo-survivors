@@ -1,0 +1,118 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Resource" path="res://resources/enemies/snow_boss.tres" id="1_gkkll"]
+[ext_resource type="AudioStream" path="res://assets/music/snow.wav" id="2_7r8vt"]
+[ext_resource type="Script" path="res://scripts/data/level_data.gd" id="3_lj516"]
+[ext_resource type="Texture2D" path="res://assets/sprites/tiles_snow.png" id="4_81hhi"]
+[ext_resource type="Script" path="res://scripts/data/wave_data.gd" id="5_32npk"]
+[ext_resource type="Script" path="res://scripts/data/enemy_data.gd" id="6_j62hu"]
+[ext_resource type="Resource" path="res://resources/enemies/snow_ghost.tres" id="7_38ck6"]
+[ext_resource type="Resource" path="res://resources/enemies/snow_bat.tres" id="8_hjwj0"]
+[ext_resource type="Resource" path="res://resources/enemies/snow_wolf.tres" id="9_x1ioh"]
+[ext_resource type="Resource" path="res://resources/enemies/snow_skier.tres" id="10_im5tv"]
+[ext_resource type="Resource" path="res://resources/enemies/snow_snowman.tres" id="11_ua8oi"]
+[ext_resource type="Resource" path="res://resources/enemies/snow_yeti.tres" id="12_mje2j"]
+
+[sub_resource type="Resource" id="Resource_4hy81"]
+script = ExtResource("5_32npk")
+end_time = 90.0
+enemies = Array[ExtResource("6_j62hu")]([ExtResource("7_38ck6")])
+max_alive = 50
+
+[sub_resource type="Resource" id="Resource_x1073"]
+script = ExtResource("5_32npk")
+start_time = 20.0
+end_time = 9999.0
+enemies = Array[ExtResource("6_j62hu")]([ExtResource("8_hjwj0")])
+spawn_interval = 1.4
+max_alive = 80
+
+[sub_resource type="Resource" id="Resource_7bawo"]
+script = ExtResource("5_32npk")
+start_time = 45.0
+end_time = 9999.0
+enemies = Array[ExtResource("6_j62hu")]([ExtResource("9_x1ioh")])
+spawn_interval = 3.5
+batch_size = 4
+max_alive = 90
+formation = 1
+
+[sub_resource type="Resource" id="Resource_6mydj"]
+script = ExtResource("5_32npk")
+start_time = 70.0
+end_time = 9999.0
+enemies = Array[ExtResource("6_j62hu")]([ExtResource("10_im5tv")])
+spawn_interval = 2.5
+max_alive = 110
+
+[sub_resource type="Resource" id="Resource_ca6n4"]
+script = ExtResource("5_32npk")
+start_time = 100.0
+end_time = 9999.0
+enemies = Array[ExtResource("6_j62hu")]([ExtResource("11_ua8oi")])
+spawn_interval = 3.0
+max_alive = 120
+
+[sub_resource type="Resource" id="Resource_3i4k3"]
+script = ExtResource("5_32npk")
+start_time = 130.0
+end_time = 131.0
+enemies = Array[ExtResource("6_j62hu")]([ExtResource("7_38ck6")])
+spawn_interval = 99.0
+batch_size = 28
+max_alive = 400
+formation = 2
+
+[sub_resource type="Resource" id="Resource_4shuh"]
+script = ExtResource("5_32npk")
+start_time = 150.0
+end_time = 9999.0
+enemies = Array[ExtResource("6_j62hu")]([ExtResource("7_38ck6"), ExtResource("8_hjwj0")])
+spawn_interval = 0.6
+batch_size = 3
+max_alive = 150
+
+[sub_resource type="Resource" id="Resource_f4r74"]
+script = ExtResource("5_32npk")
+start_time = 190.0
+end_time = 9999.0
+enemies = Array[ExtResource("6_j62hu")]([ExtResource("12_mje2j")])
+spawn_interval = 4.0
+batch_size = 1
+max_alive = 160
+
+[sub_resource type="Resource" id="Resource_a8son"]
+script = ExtResource("5_32npk")
+start_time = 240.0
+end_time = 241.0
+enemies = Array[ExtResource("6_j62hu")]([ExtResource("9_x1ioh")])
+spawn_interval = 99.0
+batch_size = 24
+max_alive = 400
+formation = 2
+
+[sub_resource type="Resource" id="Resource_spf3a"]
+script = ExtResource("5_32npk")
+start_time = 250.0
+end_time = 9999.0
+enemies = Array[ExtResource("6_j62hu")]([ExtResource("7_38ck6"), ExtResource("8_hjwj0"), ExtResource("10_im5tv"), ExtResource("9_x1ioh"), ExtResource("11_ua8oi")])
+spawn_interval = 0.45
+batch_size = 3
+max_alive = 200
+
+[resource]
+script = ExtResource("3_lj516")
+id = &"snow"
+display_name = "Pics Gelés"
+description = "Des pentes enneigées où skieurs fous et yétis rôdent. Gare aux boules de neige !"
+tileset = ExtResource("4_81hhi")
+floor_tiles = PackedInt32Array(0, 1, 2)
+floor_weights = PackedFloat32Array(6, 2, 1)
+decor_tiles = PackedInt32Array(3, 4, 5, 6, 7)
+decor_density = 0.03
+background_color = Color(0.9019608, 0.93333334, 0.9764706, 1)
+ambient = Color(0.95, 0.97, 1.04, 1)
+music = ExtResource("2_7r8vt")
+waves = Array[ExtResource("5_32npk")]([SubResource("Resource_4hy81"), SubResource("Resource_x1073"), SubResource("Resource_7bawo"), SubResource("Resource_6mydj"), SubResource("Resource_ca6n4"), SubResource("Resource_3i4k3"), SubResource("Resource_4shuh"), SubResource("Resource_f4r74"), SubResource("Resource_a8son"), SubResource("Resource_spf3a")])
+boss = ExtResource("1_gkkll")
+hp_growth_per_minute = 0.45

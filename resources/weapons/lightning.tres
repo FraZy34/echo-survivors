@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/strike_weapon.gd" id="1_x1nvk"]
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="2_83yo0"]
+[ext_resource type="Script" path="res://scripts/data/weapon_data.gd" id="3_xonqh"]
+
+[resource]
+script = ExtResource("3_xonqh")
+id = &"lightning"
+display_name = "Bâton de foudre"
+description = "La foudre s'abat sur des ennemis proches."
+icon_sheet = ExtResource("2_83yo0")
+icon_frame = 14
+behavior = ExtResource("1_x1nvk")
+damage = 18.0
+cooldown = 2.0
+amount = 2
+max_range = 260.0
+projectile_sheet = ExtResource("2_83yo0")
+projectile_frame = 14
+projectile_tint = Color(1, 0.95, 0.5, 1)
+level_bonuses = Array[Dictionary]([{
+"amount": 1
+}, {
+"damage": 8.0
+}, {
+"amount": 1,
+"cooldown": 0.85
+}, {
+"area": 0.4,
+"damage": 12.0
+}])

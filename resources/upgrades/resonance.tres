@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="1_k0ttl"]
+[ext_resource type="Script" path="res://scripts/data/upgrade_data.gd" id="2_kkvou"]
+
+[resource]
+script = ExtResource("2_kkvou")
+id = &"resonance"
+display_name = "Résonance"
+description = "Les attaques de l'Écho sont 20 % plus puissantes."
+icon_sheet = ExtResource("1_k0ttl")
+icon_frame = 31
+category = 1
+stat = &"echo_power"
+value = 0.2
+max_stacks = 4
+weight = 1.2

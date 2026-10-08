@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="GameDatabase" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="1_faeod"]
+[ext_resource type="Script" path="res://scripts/data/level_data.gd" id="2_u8ny4"]
+[ext_resource type="Resource" path="res://resources/levels/forest.tres" id="3_y2cau"]
+[ext_resource type="Resource" path="res://resources/levels/snow.tres" id="4_cky2p"]
+[ext_resource type="Resource" path="res://resources/levels/crypt.tres" id="5_lhbt0"]
+[ext_resource type="Script" path="res://scripts/data/upgrade_data.gd" id="6_cad01"]
+[ext_resource type="Resource" path="res://resources/upgrades/might.tres" id="7_cw8ur"]
+[ext_resource type="Resource" path="res://resources/upgrades/vitality.tres" id="8_kh3ut"]
+[ext_resource type="Resource" path="res://resources/upgrades/regen.tres" id="9_o0gvb"]
+[ext_resource type="Resource" path="res://resources/upgrades/armor.tres" id="10_5p7mi"]
+[ext_resource type="Resource" path="res://resources/upgrades/haste.tres" id="11_ktkgl"]
+[ext_resource type="Resource" path="res://resources/upgrades/swiftness.tres" id="12_euspe"]
+[ext_resource type="Resource" path="res://resources/upgrades/area.tres" id="13_jf2m2"]
+[ext_resource type="Resource" path="res://resources/upgrades/velocity.tres" id="14_02ls7"]
+[ext_resource type="Resource" path="res://resources/upgrades/persistence.tres" id="15_y7wd0"]
+[ext_resource type="Resource" path="res://resources/upgrades/magnet.tres" id="16_h1554"]
+[ext_resource type="Resource" path="res://resources/upgrades/wisdom.tres" id="17_48a78"]
+[ext_resource type="Resource" path="res://resources/upgrades/multiplicity.tres" id="18_76qfy"]
+[ext_resource type="Resource" path="res://resources/upgrades/resonance.tres" id="19_b1l2i"]
+[ext_resource type="Resource" path="res://resources/upgrades/mirror.tres" id="20_hbnij"]
+[ext_resource type="Resource" path="res://resources/upgrades/pulse.tres" id="21_nl4g4"]
+[ext_resource type="Script" path="res://scripts/data/game_database.gd" id="22_p2ov2"]
+[ext_resource type="Resource" path="res://resources/weapons/dagger.tres" id="23_rn17v"]
+[ext_resource type="Script" path="res://scripts/data/weapon_data.gd" id="24_jbn8f"]
+[ext_resource type="Resource" path="res://resources/weapons/bow.tres" id="25_m4tx5"]
+[ext_resource type="Resource" path="res://resources/weapons/axes.tres" id="26_o22hh"]
+[ext_resource type="Resource" path="res://resources/weapons/aura.tres" id="27_rcs1m"]
+[ext_resource type="Resource" path="res://resources/weapons/bombs.tres" id="28_v3p1s"]
+[ext_resource type="Resource" path="res://resources/weapons/lightning.tres" id="29_ovbvs"]
+[ext_resource type="Resource" path="res://resources/weapons/orbs.tres" id="30_yq1me"]
+
+[resource]
+script = ExtResource("22_p2ov2")
+levels = Array[ExtResource("2_u8ny4")]([ExtResource("3_y2cau"), ExtResource("4_cky2p"), ExtResource("5_lhbt0")])
+weapons = Array[ExtResource("24_jbn8f")]([ExtResource("23_rn17v"), ExtResource("25_m4tx5"), ExtResource("26_o22hh"), ExtResource("27_rcs1m"), ExtResource("28_v3p1s"), ExtResource("29_ovbvs"), ExtResource("30_yq1me")])
+passives = Array[ExtResource("6_cad01")]([ExtResource("7_cw8ur"), ExtResource("8_kh3ut"), ExtResource("9_o0gvb"), ExtResource("10_5p7mi"), ExtResource("11_ktkgl"), ExtResource("12_euspe"), ExtResource("13_jf2m2"), ExtResource("14_02ls7"), ExtResource("15_y7wd0"), ExtResource("16_h1554"), ExtResource("17_48a78"), ExtResource("18_76qfy"), ExtResource("19_b1l2i"), ExtResource("20_hbnij"), ExtResource("21_nl4g4")])
+starting_weapon = ExtResource("23_rn17v")
+items_sheet = ExtResource("1_faeod")
+heal_icon_frame = 10
+gold_icon_frame = 11

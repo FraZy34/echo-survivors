@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="1_2n3hh"]
+[ext_resource type="PackedScene" path="res://scenes/actors/enemy.tscn" id="2_hclll"]
+[ext_resource type="Script" path="res://scripts/data/enemy_data.gd" id="3_11ivn"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters.png" id="4_pyylf"]
+
+[resource]
+script = ExtResource("3_11ivn")
+id = &"forest_spider"
+display_name = "Araignée"
+scene = ExtResource("2_hclll")
+sheet = ExtResource("4_pyylf")
+frames = PackedInt32Array(13, 14)
+anim_fps = 6.0
+max_hp = 14.0
+damage = 8.0
+xp = 2
+projectile_sheet = ExtResource("1_2n3hh")
+projectile_frame = 4

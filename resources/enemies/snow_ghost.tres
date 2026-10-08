@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="1_0k13o"]
+[ext_resource type="PackedScene" path="res://scenes/actors/enemy.tscn" id="2_ycl8m"]
+[ext_resource type="Script" path="res://scripts/data/enemy_data.gd" id="3_5lrlf"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters.png" id="4_5h8n5"]
+
+[resource]
+script = ExtResource("3_5lrlf")
+id = &"snow_ghost"
+display_name = "Esprit du blizzard"
+scene = ExtResource("2_ycl8m")
+sheet = ExtResource("4_5h8n5")
+frames = PackedInt32Array(21, 22)
+speed = 44.0
+damage = 8.0
+wobble = 30.0
+projectile_sheet = ExtResource("1_0k13o")
+projectile_frame = 4

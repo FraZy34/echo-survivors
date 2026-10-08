@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3]
+
+[ext_resource type="Resource" path="res://resources/enemies/crypt_bat.tres" id="1_sjujs"]
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="2_kjkqd"]
+[ext_resource type="PackedScene" path="res://scenes/actors/boss_enemy.tscn" id="3_wy8gc"]
+[ext_resource type="Script" path="res://scripts/data/enemy_data.gd" id="4_lpkrh"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters.png" id="5_26ot2"]
+
+[resource]
+script = ExtResource("4_lpkrh")
+id = &"crypt_boss"
+display_name = "Le Démon Écarlate"
+scene = ExtResource("3_wy8gc")
+sheet = ExtResource("5_26ot2")
+frames = PackedInt32Array(48, 49)
+anim_fps = 3.0
+sprite_scale = 3.2
+max_hp = 4200.0
+speed = 36.0
+damage = 28.0
+xp = 120
+hit_radius = 22.0
+knockback_resist = 1.0
+attack_interval = 2.4
+attack_speed = 115.0
+projectile_sheet = ExtResource("2_kjkqd")
+projectile_frame = 4
+projectile_tint = Color(1.3, 0.3, 0.3, 1)
+is_boss = true
+minion = ExtResource("1_sjujs")

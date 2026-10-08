@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/aura_weapon.gd" id="1_2344v"]
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="2_vyqwv"]
+[ext_resource type="Script" path="res://scripts/data/weapon_data.gd" id="3_7sn8y"]
+
+[resource]
+script = ExtResource("3_7sn8y")
+id = &"aura"
+display_name = "Aura ardente"
+description = "Brûle en continu les ennemis qui vous approchent."
+icon_sheet = ExtResource("2_vyqwv")
+icon_frame = 13
+behavior = ExtResource("1_2344v")
+damage = 5.0
+cooldown = 0.6
+knockback = 25.0
+projectile_sheet = ExtResource("2_vyqwv")
+projectile_frame = 13
+projectile_tint = Color(1, 0.55, 0.25, 1)
+level_bonuses = Array[Dictionary]([{
+"damage": 2.0
+}, {
+"area": 0.2
+}, {
+"cooldown": 0.85,
+"damage": 3.0
+}, {
+"area": 0.3,
+"damage": 3.0
+}])

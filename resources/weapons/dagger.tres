@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/projectile_weapon.gd" id="1_ycbmi"]
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="2_fjiph"]
+[ext_resource type="Script" path="res://scripts/data/weapon_data.gd" id="3_ycsd4"]
+
+[resource]
+script = ExtResource("3_ycsd4")
+id = &"dagger"
+display_name = "Dague"
+description = "Lance une dague vers l'ennemi le plus proche."
+icon_sheet = ExtResource("2_fjiph")
+behavior = ExtResource("1_ycbmi")
+cooldown = 0.75
+speed = 260.0
+duration = 1.2
+knockback = 50.0
+hit_radius = 5.0
+spread_deg = 10.0
+max_range = 320.0
+projectile_sheet = ExtResource("2_fjiph")
+sprite_angle = 1.5707963267948966
+level_bonuses = Array[Dictionary]([{
+"amount": 1
+}, {
+"damage": 4.0
+}, {
+"amount": 1,
+"cooldown": 0.9
+}, {
+"damage": 5.0,
+"pierce": 1
+}])

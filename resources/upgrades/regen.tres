@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="1_44cnk"]
+[ext_resource type="Script" path="res://scripts/data/upgrade_data.gd" id="2_mfk0m"]
+
+[resource]
+script = ExtResource("2_mfk0m")
+id = &"regen"
+display_name = "Régénération"
+description = "Régénère 0,4 PV par seconde."
+icon_sheet = ExtResource("1_44cnk")
+icon_frame = 18
+stat = &"regen"
+value = 0.4

@@ -1,0 +1,111 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Resource" path="res://resources/enemies/forest_boss.tres" id="1_vwqop"]
+[ext_resource type="AudioStream" path="res://assets/music/forest.wav" id="2_sfldg"]
+[ext_resource type="Script" path="res://scripts/data/level_data.gd" id="3_p2shv"]
+[ext_resource type="Texture2D" path="res://assets/sprites/tiles_forest.png" id="4_vvnuh"]
+[ext_resource type="Script" path="res://scripts/data/wave_data.gd" id="5_pq5af"]
+[ext_resource type="Script" path="res://scripts/data/enemy_data.gd" id="6_75pjb"]
+[ext_resource type="Resource" path="res://resources/enemies/forest_rat.tres" id="7_64428"]
+[ext_resource type="Resource" path="res://resources/enemies/forest_bat.tres" id="8_vfbsc"]
+[ext_resource type="Resource" path="res://resources/enemies/forest_spider.tres" id="9_505sp"]
+[ext_resource type="Resource" path="res://resources/enemies/forest_slime.tres" id="10_oxei4"]
+[ext_resource type="Resource" path="res://resources/enemies/forest_bandit.tres" id="11_dq2n5"]
+
+[sub_resource type="Resource" id="Resource_apwfw"]
+script = ExtResource("5_pq5af")
+end_time = 75.0
+enemies = Array[ExtResource("6_75pjb")]([ExtResource("7_64428")])
+spawn_interval = 0.9
+max_alive = 50
+
+[sub_resource type="Resource" id="Resource_nocyb"]
+script = ExtResource("5_pq5af")
+start_time = 15.0
+end_time = 9999.0
+enemies = Array[ExtResource("6_75pjb")]([ExtResource("8_vfbsc")])
+spawn_interval = 1.6
+max_alive = 70
+
+[sub_resource type="Resource" id="Resource_jeddk"]
+script = ExtResource("5_pq5af")
+start_time = 40.0
+end_time = 9999.0
+enemies = Array[ExtResource("6_75pjb")]([ExtResource("9_505sp")])
+spawn_interval = 3.0
+batch_size = 5
+max_alive = 80
+formation = 1
+
+[sub_resource type="Resource" id="Resource_q6ylx"]
+script = ExtResource("5_pq5af")
+start_time = 75.0
+end_time = 9999.0
+enemies = Array[ExtResource("6_75pjb")]([ExtResource("7_64428"), ExtResource("9_505sp")])
+spawn_interval = 0.7
+batch_size = 3
+max_alive = 110
+
+[sub_resource type="Resource" id="Resource_v6c2d"]
+script = ExtResource("5_pq5af")
+start_time = 100.0
+end_time = 9999.0
+enemies = Array[ExtResource("6_75pjb")]([ExtResource("10_oxei4")])
+spawn_interval = 2.4
+max_alive = 120
+
+[sub_resource type="Resource" id="Resource_nn0lb"]
+script = ExtResource("5_pq5af")
+start_time = 120.0
+end_time = 121.0
+enemies = Array[ExtResource("6_75pjb")]([ExtResource("8_vfbsc")])
+spawn_interval = 99.0
+batch_size = 24
+max_alive = 400
+formation = 2
+
+[sub_resource type="Resource" id="Resource_1mgf7"]
+script = ExtResource("5_pq5af")
+start_time = 150.0
+end_time = 9999.0
+enemies = Array[ExtResource("6_75pjb")]([ExtResource("11_dq2n5")])
+spawn_interval = 4.0
+batch_size = 3
+max_alive = 140
+formation = 1
+
+[sub_resource type="Resource" id="Resource_63u2n"]
+script = ExtResource("5_pq5af")
+start_time = 190.0
+end_time = 191.0
+enemies = Array[ExtResource("6_75pjb")]([ExtResource("10_oxei4")])
+spawn_interval = 99.0
+batch_size = 18
+max_alive = 400
+formation = 2
+
+[sub_resource type="Resource" id="Resource_p7blm"]
+script = ExtResource("5_pq5af")
+start_time = 200.0
+end_time = 9999.0
+enemies = Array[ExtResource("6_75pjb")]([ExtResource("7_64428"), ExtResource("8_vfbsc"), ExtResource("9_505sp"), ExtResource("10_oxei4"), ExtResource("11_dq2n5")])
+spawn_interval = 0.5
+batch_size = 3
+max_alive = 170
+
+[resource]
+script = ExtResource("3_p2shv")
+id = &"forest"
+display_name = "Forêt d'Automne"
+description = "Une forêt paisible envahie de vermine. Idéale pour apprivoiser votre Écho."
+tileset = ExtResource("4_vvnuh")
+floor_tiles = PackedInt32Array(0, 1, 2, 3)
+floor_weights = PackedFloat32Array(6, 3, 0.7, 0.4)
+decor_tiles = PackedInt32Array(4, 5, 6, 7, 8, 9, 10)
+decor_density = 0.035
+background_color = Color(0.3529412, 0.6509804, 0.30588236, 1)
+ambient = Color(1, 1, 0.97, 1)
+music = ExtResource("2_sfldg")
+duration = 240.0
+waves = Array[ExtResource("5_pq5af")]([SubResource("Resource_apwfw"), SubResource("Resource_nocyb"), SubResource("Resource_jeddk"), SubResource("Resource_q6ylx"), SubResource("Resource_v6c2d"), SubResource("Resource_nn0lb"), SubResource("Resource_1mgf7"), SubResource("Resource_63u2n"), SubResource("Resource_p7blm")])
+boss = ExtResource("1_vwqop")

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="1_5m3ic"]
+[ext_resource type="Script" path="res://scripts/data/upgrade_data.gd" id="2_cuopc"]
+
+[resource]
+script = ExtResource("2_cuopc")
+id = &"velocity"
+display_name = "Vélocité"
+description = "+12 % de vitesse des projectiles."
+icon_sheet = ExtResource("1_5m3ic")
+icon_frame = 23
+stat = &"proj_speed"
+value = 0.12
+max_stacks = 4
+weight = 0.7

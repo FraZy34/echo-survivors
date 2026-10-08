@@ -1,0 +1,67 @@
+[gd_scene load_steps=17 format=3]
+
+[ext_resource type="Script" path="res://scripts/systems/arena.gd" id="1_arena"]
+[ext_resource type="Script" path="res://scripts/world/chunked_floor.gd" id="2_floor"]
+[ext_resource type="Script" path="res://scripts/systems/pickup_manager.gd" id="3_pickups"]
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="4_items"]
+[ext_resource type="Script" path="res://scripts/systems/enemy_manager.gd" id="7_enemies"]
+[ext_resource type="PackedScene" path="res://scenes/actors/companion.tscn" id="8_companion"]
+[ext_resource type="PackedScene" path="res://scenes/actors/player.tscn" id="9_player"]
+[ext_resource type="Script" path="res://scripts/systems/projectile_manager.gd" id="10_projectiles"]
+[ext_resource type="Script" path="res://scripts/world/effects_layer.gd" id="11_effects"]
+[ext_resource type="FontVariation" path="res://resources/ui/body_font.tres" id="12_font"]
+[ext_resource type="Script" path="res://scripts/systems/wave_spawner.gd" id="13_spawner"]
+[ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="14_hud"]
+[ext_resource type="PackedScene" path="res://scenes/ui/level_up_panel.tscn" id="15_levelup"]
+[ext_resource type="PackedScene" path="res://scenes/ui/pause_menu.tscn" id="16_pause"]
+[ext_resource type="PackedScene" path="res://scenes/ui/game_over.tscn" id="17_gameover"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_arena")
+
+[node name="Ambient" type="CanvasModulate" parent="."]
+
+[node name="Floor" type="Node2D" parent="."]
+z_index = -10
+script = ExtResource("2_floor")
+
+[node name="Pickups" type="Node2D" parent="."]
+z_index = -1
+script = ExtResource("3_pickups")
+sheet = ExtResource("4_items")
+gem_small_frame = 5
+gem_mid_frame = 6
+gem_big_frame = 7
+potion_frame = 8
+bell_frame = 9
+
+[node name="Actors" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Enemies" type="Node2D" parent="Actors"]
+y_sort_enabled = true
+script = ExtResource("7_enemies")
+
+[node name="Companion" parent="Actors" instance=ExtResource("8_companion")]
+
+[node name="Player" parent="Actors" instance=ExtResource("9_player")]
+
+[node name="Projectiles" type="Node2D" parent="."]
+z_index = 2
+script = ExtResource("10_projectiles")
+
+[node name="Effects" type="Node2D" parent="."]
+z_index = 3
+script = ExtResource("11_effects")
+font = ExtResource("12_font")
+
+[node name="WaveSpawner" type="Node" parent="."]
+script = ExtResource("13_spawner")
+
+[node name="Hud" parent="." instance=ExtResource("14_hud")]
+
+[node name="LevelUpPanel" parent="." instance=ExtResource("15_levelup")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("16_pause")]
+
+[node name="GameOver" parent="." instance=ExtResource("17_gameover")]

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="1_rtgs5"]
+[ext_resource type="PackedScene" path="res://scenes/actors/enemy.tscn" id="2_5ovnm"]
+[ext_resource type="Script" path="res://scripts/data/enemy_data.gd" id="3_1pe5c"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters.png" id="4_scnot"]
+
+[resource]
+script = ExtResource("3_1pe5c")
+id = &"snow_wolf"
+display_name = "Loup des neiges"
+scene = ExtResource("2_5ovnm")
+sheet = ExtResource("4_scnot")
+frames = PackedInt32Array(27, 28)
+anim_fps = 8.0
+max_hp = 14.0
+speed = 52.0
+damage = 8.0
+xp = 2
+projectile_sheet = ExtResource("1_rtgs5")
+projectile_frame = 4

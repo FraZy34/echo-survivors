@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3]
+
+[ext_resource type="Resource" path="res://resources/enemies/forest_spider.tres" id="1_kyhnb"]
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="2_a0gx3"]
+[ext_resource type="PackedScene" path="res://scenes/actors/boss_enemy.tscn" id="3_vdek4"]
+[ext_resource type="Script" path="res://scripts/data/enemy_data.gd" id="4_y313k"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters.png" id="5_wu0h0"]
+
+[resource]
+script = ExtResource("4_y313k")
+id = &"forest_boss"
+display_name = "Le Cyclope Ancien"
+scene = ExtResource("3_vdek4")
+sheet = ExtResource("5_wu0h0")
+frames = PackedInt32Array(19, 20)
+anim_fps = 3.0
+sprite_scale = 3.0
+max_hp = 2000.0
+speed = 30.0
+damage = 20.0
+xp = 50
+hit_radius = 20.0
+knockback_resist = 1.0
+attack_interval = 3.0
+attack_speed = 90.0
+projectile_sheet = ExtResource("2_a0gx3")
+projectile_frame = 4
+projectile_tint = Color(1, 0.6, 0.3, 1)
+is_boss = true
+minion = ExtResource("1_kyhnb")

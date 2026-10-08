@@ -1,0 +1,269 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="1_menu"]
+[ext_resource type="Script" path="res://scripts/ui/menu_backdrop.gd" id="2_backdrop"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters.png" id="4_chars"]
+[ext_resource type="AudioStream" path="res://assets/music/menu.wav" id="5_music"]
+[ext_resource type="FontVariation" path="res://resources/ui/title_font.tres" id="3_title"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_menu")
+music = ExtResource("5_music")
+
+[node name="Backdrop" type="Node2D" parent="."]
+script = ExtResource("2_backdrop")
+characters = ExtResource("4_chars")
+hero_frames = PackedInt32Array(1, 2, 3, 4)
+echo_frames = PackedInt32Array(5, 6, 7, 8)
+
+[node name="Dim" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.05, 0.03, 0.1, 0.55)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 34.0
+offset_bottom = 74.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.4, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_title")
+theme_override_font_sizes/font_size = 34
+text = "ÉCHO SURVIVORS"
+horizontal_alignment = 1
+
+[node name="Tagline" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 76.0
+offset_bottom = 92.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.55, 1, 1, 1)
+text = "Survivez. Votre Écho se souvient de chacun de vos gestes."
+horizontal_alignment = 1
+
+[node name="MainBox" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -50.0
+offset_right = 75.0
+offset_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+
+[node name="PlayButton" type="Button" parent="MainBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Jouer"
+
+[node name="HowToButton" type="Button" parent="MainBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Comment jouer"
+
+[node name="OptionsButton" type="Button" parent="MainBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Options"
+
+[node name="CreditsButton" type="Button" parent="MainBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Crédits"
+
+[node name="QuitButton" type="Button" parent="MainBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Quitter"
+
+[node name="HowToPanel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -84.0
+offset_right = 240.0
+offset_bottom = 172.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="HowToPanel"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Heading" type="Label" parent="HowToPanel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.4, 1)
+theme_override_font_sizes/font_size = 12
+text = "Comment jouer"
+horizontal_alignment = 1
+
+[node name="Body" type="Label" parent="HowToPanel/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 9
+text = "• Déplacez-vous avec Z Q S D (W A S D en QWERTY) ou les flèches. Échap met le jeu en pause.
+• Vos armes tirent toutes seules. Ramassez les gemmes des ennemis vaincus pour gagner de l'expérience.
+• À chaque niveau, choisissez une amélioration parmi trois : arme, niveau d'arme, statistique ou bonus d'Écho.
+
+L'ÉCHO, votre compagnon spectral
+• Il rejoue exactement vos déplacements et vos attaques, avec 2 secondes de retard.
+• La traînée bleue montre le chemin qu'il va suivre : il passera là où vous étiez.
+• Les monstres vous poursuivent, ils se retrouvent donc sur le chemin de l'Écho !
+  Entraînez-les dans votre sillage pour que ses attaques différées les frappent.
+• Bonus d'Écho : Résonance (puissance), Reflet (attaques en miroir), Onde (impulsion toutes les 2 s).
+
+Survivez jusqu'à l'arrivée du boss, puis terrassez-le pour terminer le niveau."
+autowrap_mode = 3
+
+[node name="BackButton" type="Button" parent="HowToPanel/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Retour"
+
+[node name="OptionsPanel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -70.0
+offset_right = 120.0
+offset_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="OptionsPanel"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Heading" type="Label" parent="OptionsPanel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.4, 1)
+theme_override_font_sizes/font_size = 12
+text = "Options"
+horizontal_alignment = 1
+
+[node name="VolumeLabel" type="Label" parent="OptionsPanel/VBox"]
+layout_mode = 2
+text = "Volume des effets sonores"
+
+[node name="VolumeSlider" type="HSlider" parent="OptionsPanel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.7
+
+[node name="MusicLabel" type="Label" parent="OptionsPanel/VBox"]
+layout_mode = 2
+text = "Volume de la musique"
+
+[node name="MusicSlider" type="HSlider" parent="OptionsPanel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.6
+
+[node name="NumbersCheck" type="CheckButton" parent="OptionsPanel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Afficher les dégâts"
+
+[node name="FullscreenCheck" type="CheckButton" parent="OptionsPanel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Plein écran"
+
+[node name="BackButton" type="Button" parent="OptionsPanel/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Retour"
+
+[node name="CreditsPanel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -50.0
+offset_right = 160.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="CreditsPanel"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Heading" type="Label" parent="CreditsPanel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.4, 1)
+theme_override_font_sizes/font_size = 12
+text = "Crédits"
+horizontal_alignment = 1
+
+[node name="Body" type="Label" parent="CreditsPanel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+text = "Jeu réalisé avec Godot Engine 4 en GDScript.
+
+Graphismes, sons et musiques : créés par le code du projet
+(générateur tools/generate_assets.gd : pixel art et synthèse sonore).
+Police : Pixelify Sans (SIL Open Font License)."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="BackButton" type="Button" parent="CreditsPanel/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Retour"
+
+[node name="Footer" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -18.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.75, 0.7, 0.85, 1)
+theme_override_font_sizes/font_size = 8
+text = "ZQSD / flèches : se déplacer   •   Échap : pause   •   Les armes tirent automatiquement"
+horizontal_alignment = 1

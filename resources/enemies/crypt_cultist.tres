@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="1_6e70a"]
+[ext_resource type="PackedScene" path="res://scenes/actors/ranged_enemy.tscn" id="2_12v4a"]
+[ext_resource type="Script" path="res://scripts/data/enemy_data.gd" id="3_1yp1p"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters.png" id="4_m6rjm"]
+
+[resource]
+script = ExtResource("3_1yp1p")
+id = &"crypt_cultist"
+display_name = "Cultiste"
+scene = ExtResource("2_12v4a")
+sheet = ExtResource("4_m6rjm")
+frames = PackedInt32Array(42, 43)
+max_hp = 26.0
+speed = 28.0
+damage = 11.0
+xp = 3
+attack_interval = 2.2
+attack_speed = 120.0
+attack_range = 180.0
+projectile_sheet = ExtResource("1_6e70a")
+projectile_frame = 4
+projectile_tint = Color(0.9, 0.4, 1.2, 1)

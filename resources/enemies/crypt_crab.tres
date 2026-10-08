@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="1_2ap7r"]
+[ext_resource type="PackedScene" path="res://scenes/actors/charger_enemy.tscn" id="2_ylb0y"]
+[ext_resource type="Script" path="res://scripts/data/enemy_data.gd" id="3_n2m1b"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters.png" id="4_5hlel"]
+
+[resource]
+script = ExtResource("3_n2m1b")
+id = &"crypt_crab"
+display_name = "Rôdeur cramoisi"
+scene = ExtResource("2_ylb0y")
+sheet = ExtResource("4_5hlel")
+frames = PackedInt32Array(44, 45)
+sprite_scale = 1.2
+max_hp = 42.0
+speed = 32.0
+damage = 14.0
+xp = 4
+hit_radius = 7.0
+knockback_resist = 0.5
+attack_interval = 3.0
+attack_speed = 200.0
+attack_range = 150.0
+projectile_sheet = ExtResource("1_2ap7r")
+projectile_frame = 4

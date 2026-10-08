@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/orbit_weapon.gd" id="1_at356"]
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="2_a5dvu"]
+[ext_resource type="Script" path="res://scripts/data/weapon_data.gd" id="3_r558q"]
+
+[resource]
+script = ExtResource("3_r558q")
+id = &"axes"
+display_name = "Haches tournoyantes"
+description = "Des haches tournent autour de vous et repoussent les ennemis."
+icon_sheet = ExtResource("2_a5dvu")
+icon_frame = 2
+behavior = ExtResource("1_at356")
+damage = 12.0
+cooldown = 4.5
+amount = 2
+speed = 4.2
+duration = 2.6
+pierce = -1
+knockback = 90.0
+hit_radius = 7.0
+projectile_sheet = ExtResource("2_a5dvu")
+projectile_frame = 2
+orient_to_direction = false
+spin_speed = 14.0
+level_bonuses = Array[Dictionary]([{
+"amount": 1
+}, {
+"damage": 5.0,
+"duration": 0.6
+}, {
+"amount": 1
+}, {
+"area": 0.25,
+"damage": 6.0
+}])

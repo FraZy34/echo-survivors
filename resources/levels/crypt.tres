@@ -1,0 +1,123 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Resource" path="res://resources/enemies/crypt_boss.tres" id="1_vikfl"]
+[ext_resource type="AudioStream" path="res://assets/music/crypt.wav" id="2_tl18l"]
+[ext_resource type="Script" path="res://scripts/data/level_data.gd" id="3_xx2o6"]
+[ext_resource type="Texture2D" path="res://assets/sprites/tiles_crypt.png" id="4_74og5"]
+[ext_resource type="Script" path="res://scripts/data/wave_data.gd" id="5_yptcj"]
+[ext_resource type="Script" path="res://scripts/data/enemy_data.gd" id="6_1uos8"]
+[ext_resource type="Resource" path="res://resources/enemies/crypt_wraith.tres" id="7_n8glu"]
+[ext_resource type="Resource" path="res://resources/enemies/crypt_bat.tres" id="8_cqnfk"]
+[ext_resource type="Resource" path="res://resources/enemies/crypt_spider.tres" id="9_jhi6f"]
+[ext_resource type="Resource" path="res://resources/enemies/crypt_cultist.tres" id="10_d5e0x"]
+[ext_resource type="Resource" path="res://resources/enemies/crypt_ghost.tres" id="11_xe42p"]
+[ext_resource type="Resource" path="res://resources/enemies/crypt_crab.tres" id="12_0k8ny"]
+
+[sub_resource type="Resource" id="Resource_3dv31"]
+script = ExtResource("5_yptcj")
+end_time = 90.0
+enemies = Array[ExtResource("6_1uos8")]([ExtResource("7_n8glu")])
+spawn_interval = 0.9
+
+[sub_resource type="Resource" id="Resource_3o8oc"]
+script = ExtResource("5_yptcj")
+start_time = 20.0
+end_time = 9999.0
+enemies = Array[ExtResource("6_1uos8")]([ExtResource("8_cqnfk")])
+spawn_interval = 1.2
+batch_size = 3
+max_alive = 90
+
+[sub_resource type="Resource" id="Resource_12wve"]
+script = ExtResource("5_yptcj")
+start_time = 50.0
+end_time = 9999.0
+enemies = Array[ExtResource("6_1uos8")]([ExtResource("9_jhi6f")])
+spawn_interval = 3.0
+batch_size = 5
+max_alive = 110
+formation = 1
+
+[sub_resource type="Resource" id="Resource_xa3ai"]
+script = ExtResource("5_yptcj")
+start_time = 80.0
+end_time = 9999.0
+enemies = Array[ExtResource("6_1uos8")]([ExtResource("10_d5e0x")])
+spawn_interval = 3.0
+max_alive = 120
+
+[sub_resource type="Resource" id="Resource_nmew1"]
+script = ExtResource("5_yptcj")
+start_time = 110.0
+end_time = 9999.0
+enemies = Array[ExtResource("6_1uos8")]([ExtResource("11_xe42p")])
+spawn_interval = 0.8
+batch_size = 3
+max_alive = 150
+
+[sub_resource type="Resource" id="Resource_ra00a"]
+script = ExtResource("5_yptcj")
+start_time = 140.0
+end_time = 141.0
+enemies = Array[ExtResource("6_1uos8")]([ExtResource("7_n8glu")])
+spawn_interval = 99.0
+batch_size = 30
+max_alive = 400
+formation = 2
+
+[sub_resource type="Resource" id="Resource_2ykpn"]
+script = ExtResource("5_yptcj")
+start_time = 170.0
+end_time = 9999.0
+enemies = Array[ExtResource("6_1uos8")]([ExtResource("12_0k8ny")])
+spawn_interval = 5.0
+batch_size = 3
+max_alive = 170
+formation = 1
+
+[sub_resource type="Resource" id="Resource_ct1tp"]
+script = ExtResource("5_yptcj")
+start_time = 220.0
+end_time = 221.0
+enemies = Array[ExtResource("6_1uos8")]([ExtResource("9_jhi6f")])
+spawn_interval = 99.0
+batch_size = 32
+max_alive = 400
+formation = 2
+
+[sub_resource type="Resource" id="Resource_5appu"]
+script = ExtResource("5_yptcj")
+start_time = 240.0
+end_time = 9999.0
+enemies = Array[ExtResource("6_1uos8")]([ExtResource("7_n8glu"), ExtResource("11_xe42p"), ExtResource("9_jhi6f"), ExtResource("10_d5e0x"), ExtResource("8_cqnfk")])
+spawn_interval = 0.4
+batch_size = 3
+max_alive = 220
+
+[sub_resource type="Resource" id="Resource_uqy78"]
+script = ExtResource("5_yptcj")
+start_time = 300.0
+end_time = 301.0
+enemies = Array[ExtResource("6_1uos8")]([ExtResource("8_cqnfk")])
+spawn_interval = 99.0
+batch_size = 36
+max_alive = 400
+formation = 2
+
+[resource]
+script = ExtResource("3_xx2o6")
+id = &"crypt"
+display_name = "Crypte Maudite"
+description = "Les profondeurs d'une crypte hantée. Cultistes, spectres et un démon vous y attendent."
+tileset = ExtResource("4_74og5")
+floor_tiles = PackedInt32Array(0, 1, 2)
+floor_weights = PackedFloat32Array(6, 1.2, 0.8)
+decor_tiles = PackedInt32Array(3, 4, 5, 6, 7, 8)
+decor_density = 0.03
+background_color = Color(0.30588236, 0.24313726, 0.3137255, 1)
+ambient = Color(0.92, 0.88, 1, 1)
+music = ExtResource("2_tl18l")
+duration = 360.0
+waves = Array[ExtResource("5_yptcj")]([SubResource("Resource_3dv31"), SubResource("Resource_3o8oc"), SubResource("Resource_12wve"), SubResource("Resource_xa3ai"), SubResource("Resource_nmew1"), SubResource("Resource_ra00a"), SubResource("Resource_2ykpn"), SubResource("Resource_ct1tp"), SubResource("Resource_5appu"), SubResource("Resource_uqy78")])
+boss = ExtResource("1_vikfl")
+hp_growth_per_minute = 0.5

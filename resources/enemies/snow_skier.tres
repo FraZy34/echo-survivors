@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="1_1uyla"]
+[ext_resource type="PackedScene" path="res://scenes/actors/charger_enemy.tscn" id="2_3vdt0"]
+[ext_resource type="Script" path="res://scripts/data/enemy_data.gd" id="3_n3oqf"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters.png" id="4_hca6w"]
+
+[resource]
+script = ExtResource("3_n3oqf")
+id = &"snow_skier"
+display_name = "Skieur fou"
+scene = ExtResource("2_3vdt0")
+sheet = ExtResource("4_hca6w")
+frames = PackedInt32Array(25, 26)
+anim_fps = 5.0
+max_hp = 18.0
+speed = 38.0
+damage = 10.0
+xp = 2
+attack_speed = 190.0
+attack_range = 150.0
+projectile_sheet = ExtResource("1_1uyla")
+projectile_frame = 4

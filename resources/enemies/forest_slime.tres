@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="1_nljtp"]
+[ext_resource type="PackedScene" path="res://scenes/actors/enemy.tscn" id="2_wrq75"]
+[ext_resource type="Script" path="res://scripts/data/enemy_data.gd" id="3_xjxiy"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters.png" id="4_8ucy4"]
+
+[resource]
+script = ExtResource("3_xjxiy")
+id = &"forest_slime"
+display_name = "Gelée verte"
+scene = ExtResource("2_wrq75")
+sheet = ExtResource("4_8ucy4")
+frames = PackedInt32Array(15, 16)
+anim_fps = 3.0
+max_hp = 30.0
+speed = 28.0
+damage = 10.0
+xp = 3
+hit_radius = 7.0
+knockback_resist = 0.4
+projectile_sheet = ExtResource("1_nljtp")
+projectile_frame = 4

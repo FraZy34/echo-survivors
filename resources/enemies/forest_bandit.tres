@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="1_fibg4"]
+[ext_resource type="PackedScene" path="res://scenes/actors/charger_enemy.tscn" id="2_4aegx"]
+[ext_resource type="Script" path="res://scripts/data/enemy_data.gd" id="3_t7hv8"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters.png" id="4_o6o72"]
+
+[resource]
+script = ExtResource("3_t7hv8")
+id = &"forest_bandit"
+display_name = "Brigand"
+scene = ExtResource("2_4aegx")
+sheet = ExtResource("4_o6o72")
+frames = PackedInt32Array(17, 18)
+anim_fps = 6.0
+max_hp = 24.0
+speed = 34.0
+damage = 12.0
+xp = 3
+attack_interval = 3.0
+attack_speed = 170.0
+attack_range = 140.0
+projectile_sheet = ExtResource("1_fibg4")
+projectile_frame = 4

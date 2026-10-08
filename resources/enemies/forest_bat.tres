@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="1_jy8p1"]
+[ext_resource type="PackedScene" path="res://scenes/actors/enemy.tscn" id="2_hunva"]
+[ext_resource type="Script" path="res://scripts/data/enemy_data.gd" id="3_4jkaq"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters.png" id="4_aubxg"]
+
+[resource]
+script = ExtResource("3_4jkaq")
+id = &"forest_bat"
+display_name = "Chauve-souris"
+scene = ExtResource("2_hunva")
+sheet = ExtResource("4_aubxg")
+frames = PackedInt32Array(11, 12)
+anim_fps = 8.0
+max_hp = 6.0
+speed = 58.0
+wobble = 35.0
+projectile_sheet = ExtResource("1_jy8p1")
+projectile_frame = 4

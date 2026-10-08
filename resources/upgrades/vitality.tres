@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="1_rk63n"]
+[ext_resource type="Script" path="res://scripts/data/upgrade_data.gd" id="2_obx2u"]
+
+[resource]
+script = ExtResource("2_obx2u")
+id = &"vitality"
+display_name = "Vitalité"
+description = "+20 PV maximum (et soigne d'autant)."
+icon_sheet = ExtResource("1_rk63n")
+icon_frame = 17
+stat = &"max_hp"
+value = 20.0

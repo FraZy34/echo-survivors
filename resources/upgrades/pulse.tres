@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="1_855ed"]
+[ext_resource type="Script" path="res://scripts/data/upgrade_data.gd" id="2_ha2cw"]
+
+[resource]
+script = ExtResource("2_ha2cw")
+id = &"pulse"
+display_name = "Onde d'écho"
+description = "Toutes les 2 s, l'Écho libère une onde qui blesse les ennemis proches."
+icon_sheet = ExtResource("1_855ed")
+icon_frame = 29
+category = 1
+stat = &"echo_pulse"
+value = 1.0
+max_stacks = 3

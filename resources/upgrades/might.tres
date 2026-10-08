@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="1_5hoaq"]
+[ext_resource type="Script" path="res://scripts/data/upgrade_data.gd" id="2_wm8p1"]
+
+[resource]
+script = ExtResource("2_wm8p1")
+id = &"might"
+display_name = "Puissance"
+description = "+10 % de dégâts pour toutes les armes."
+icon_sheet = ExtResource("1_5hoaq")
+icon_frame = 16
+stat = &"might"

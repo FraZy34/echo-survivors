@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/actors/player.gd" id="1_player"]
+[ext_resource type="Texture2D" path="res://resources/ui/shadow.tres" id="2_shadow"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters.png" id="3_sheet"]
+[ext_resource type="Script" path="res://scripts/ui/world_health_bar.gd" id="4_bar"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_player")
+idle_frames = PackedInt32Array(0)
+walk_frames = PackedInt32Array(1, 2, 3, 4)
+
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(0, 7)
+texture = ExtResource("2_shadow")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("3_sheet")
+hframes = 8
+vframes = 7
+frame = 0
+
+[node name="Weapons" type="Node" parent="."]
+
+[node name="HealthBar" type="Node2D" parent="."]
+z_index = 5
+position = Vector2(0, 11)
+script = ExtResource("4_bar")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 9.0

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="1_jq7vn"]
+[ext_resource type="Script" path="res://scripts/data/upgrade_data.gd" id="2_tpldg"]
+
+[resource]
+script = ExtResource("2_tpldg")
+id = &"mirror"
+display_name = "Reflet"
+description = "L'Écho rejoue aussi chaque attaque en miroir, dans la direction opposée."
+icon_sheet = ExtResource("1_jq7vn")
+icon_frame = 28
+category = 1
+stat = &"echo_mirror"
+value = 1.0
+max_stacks = 1
+weight = 0.9

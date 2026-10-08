@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/projectile_weapon.gd" id="1_mgwc2"]
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="2_fkh0t"]
+[ext_resource type="Script" path="res://scripts/data/weapon_data.gd" id="3_4wkgo"]
+
+[resource]
+script = ExtResource("3_4wkgo")
+id = &"bow"
+display_name = "Arc du chasseur"
+description = "Tire des flèches perforantes dans la direction de votre course."
+icon_sheet = ExtResource("2_fkh0t")
+icon_frame = 12
+behavior = ExtResource("1_mgwc2")
+damage = 14.0
+cooldown = 1.3
+speed = 300.0
+duration = 1.1
+pierce = 3
+knockback = 70.0
+hit_radius = 5.0
+aim = 2
+spread_deg = 14.0
+projectile_sheet = ExtResource("2_fkh0t")
+projectile_frame = 1
+level_bonuses = Array[Dictionary]([{
+"amount": 1
+}, {
+"damage": 6.0
+}, {
+"amount": 1,
+"pierce": 2
+}, {
+"cooldown": 0.85,
+"damage": 8.0
+}])

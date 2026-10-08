@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/items.png" id="1_m04in"]
+[ext_resource type="Script" path="res://scripts/data/upgrade_data.gd" id="2_blbos"]
+
+[resource]
+script = ExtResource("2_blbos")
+id = &"magnet"
+display_name = "Aimant"
+description = "+30 % de rayon d'attraction des gemmes."
+icon_sheet = ExtResource("1_m04in")
+icon_frame = 25
+stat = &"magnet"
+value = 13.0
+max_stacks = 4
