@@ -104,6 +104,17 @@ func _characters() -> void:
 	for i in 2:
 		c.add("demon_%d" % i, _with_legs(Art.DEMON, Art.DEMON_LEGS[i]))
 	_record("characters", c)
+	_icon(c, c.names["echo_0"])
+
+
+## Icône du jeu (128x128) : l'Écho agrandi sur fond nuit.
+func _icon(c: Canvas, frame: int) -> void:
+	var sprite := c.image.get_region(Rect2i((frame % c.columns) * 16, (frame / c.columns) * 16, 16, 16))
+	sprite.resize(112, 112, Image.INTERPOLATE_NEAREST)
+	var icon := Image.create_empty(128, 128, false, Image.FORMAT_RGBA8)
+	icon.fill(Color("1e1530"))
+	icon.blend_rect(sprite, Rect2i(0, 0, 112, 112), Vector2i(8, 4))
+	icon.save_png("res://assets/icon.png")
 
 
 # --- Objets, projectiles, icônes ------------------------------------------------------------

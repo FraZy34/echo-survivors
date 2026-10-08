@@ -13,6 +13,7 @@ config_version=5
 config/name="Écho Survivors"
 config/description="Survivor-like en Godot 4 : survivez aux vagues avec l'aide de votre Écho, un compagnon qui rejoue vos actions avec deux secondes de retard."
 run/main_scene="res://scenes/menus/main_menu.tscn"
+config/icon="res://assets/icon.png"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
 [autoload]

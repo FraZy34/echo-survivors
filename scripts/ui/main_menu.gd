@@ -26,6 +26,8 @@ func _ready() -> void:
 	options_button.pressed.connect(_click.bind(_show_panel.bind(options_panel)))
 	credits_button.pressed.connect(_click.bind(_show_panel.bind(credits_panel)))
 	quit_button.pressed.connect(get_tree().quit)
+	# Dans un navigateur, quitter n'a pas de sens : on masque le bouton.
+	quit_button.visible = not OS.has_feature("web")
 	for panel in [howto_panel, options_panel, credits_panel]:
 		panel.visible = false
 		var back: Button = panel.find_child("BackButton")
